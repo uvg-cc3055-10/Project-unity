@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Cute Birds/Scene/Main Scene.unity
+  isLoaded: 1
+  isActive: 1
