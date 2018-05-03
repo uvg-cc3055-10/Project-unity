@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 119
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 73
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 30
+  controlID: 13
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,13 +255,13 @@ MonoBehaviour:
     height: 454
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,19 +393,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scene
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scene
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Mafer\Documents\GitHub\Project-unity\Cactus Juice
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 2e2d0000
-    m_LastClickedID: 11566
-    m_ExpandedIDs: 000000005229000056290000a8290000142a0000382a0000562a0000da2a0000122b0000462b0000682c0000922c0000c22c00002e2d0000602d0000b02d0000b22d0000bc2d0000d22d00001a2e0000a02e0000aa2e0000262f0000582f0000642f00007c2f0000a02f0000ca2f0000d42f00001e300000223000004c3000005e300000fc300000ffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: aa2b0000
+    m_LastClickedID: 11178
+    m_ExpandedIDs: 000000005029000054290000a6290000122a0000362a0000542a0000e62a00001e2b0000522b0000862c0000b02c0000e22c0000802d0000d02d0000d22d0000dc2d0000f22d00003a2e0000be2e0000c82e0000442f0000762f0000822f00009a2f0000ea2f0000f42f00003e300000423000006c3000007e3000004e310000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -433,7 +433,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005229000056290000a8290000142a0000382a0000562a0000da2a0000122b0000462b0000682c0000922c0000c22c00002e2d0000602d0000b02d0000bc2d0000d22d00001a2e0000a02e0000aa2e0000642f00007c2f0000a02f0000ca2f0000d42f00001e300000223000004c3000005e300000fc300000
+    m_ExpandedIDs: 000000005029000054290000a6290000122a0000362a0000542a0000e62a00001e2b0000522b0000862c0000b02c0000e22c00004e2d0000802d0000d02d0000d22d0000dc2d0000f22d00003a2e0000be2e0000c82e0000442f0000762f0000822f00009a2f0000be2f0000ea2f0000f42f00003e300000423000006c3000007e3000004e310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ba2f0000543f000084400000cc290000722a0000062f00007a2d0000d2460000543000004431000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -551,28 +551,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 742c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 8a44f5fff044f5ff2447f5ff2847f5ff461bf6ffba36f6ff2c37f6ff6039f6ff6439f6ff5e95f6ffd095f6ff0498f6ff0898f6ffe8edf6ff58eef6ff90f0f6ff98f0f6ffaa61f8ffcc2ff9ff0211faffe438faff983cfaffe016fbffbe20fbfffa12fcff6213fcff9a15fcff14a9fcff7aa9fcffb4abfcffc41ffeffbed0ffff90f3ffff9efbffff00000000203a0000c23b00008c460000bc47000080580000905d0000a062000000630000ee640000a46b0000
+    m_ExpandedIDs: 56f5ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 37-affinity-game-background-600
-      m_OriginalName: 37-affinity-game-background-600
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 27484
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - scene1
+  - Demo
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -609,9 +609,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.7470853, y: -1.8977141, z: -0.1015625}
+    m_Target: {x: 2.7952142, y: -1.8710084, z: -0.100437306}
     speed: 2
-    m_Value: {x: 2.7470853, y: -1.8977141, z: -0.1015625}
+    m_Value: {x: 2.7952142, y: -1.8710084, z: -0.100437306}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -639,9 +639,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 21.513088
+    m_Target: 21.40038
     speed: 2
-    m_Value: 21.513088
+    m_Value: 21.40038
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -700,7 +700,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
