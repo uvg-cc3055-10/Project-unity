@@ -50,3 +50,6 @@ TagManager:
   - name: players
     uniqueID: 1671102421
     locked: 0
+  - name: contro
+    uniqueID: 1221233971
+    locked: 0
