@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d5eeab63cfd65e64d93a7b2548ba41cf
+timeCreated: 1525828002
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BLOW ME PERSONAL USE
+  fontNames:
+  - BLOW ME PERSONAL USE
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -41,7 +41,7 @@ public class MoverPersonaje : MonoBehaviour {
     {
         if (collision.gameObject.name.Equals("basurero"))
         {
-            SceneManager.LoadScene("Demo");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (collision.gameObject.name.Equals("Mace"))
         {
