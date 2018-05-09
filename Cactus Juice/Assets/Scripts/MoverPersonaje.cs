@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MoverPersonaje : MonoBehaviour {
     private float vel = 5.0f;
     private bool arriba = false;
     private bool derecha = false;
     private float jumpforce = 350f;
+    public Scrollbar scVida;
+    public float vida = 100;
     Rigidbody2D rb;
     Animator anim;
 	// Use this for initialization
@@ -30,7 +33,7 @@ public class MoverPersonaje : MonoBehaviour {
             this.transform.Translate(Vector3.right * Time.deltaTime * vel);
         }
 
-        anim.SetFloat("vel", Mathf.Abs(move));
+        anim.SetFloat("Speed", Mathf.Abs(move));
 		
 	}
 
@@ -39,6 +42,11 @@ public class MoverPersonaje : MonoBehaviour {
         if (collision.gameObject.name.Equals("basurero"))
         {
             SceneManager.LoadScene("Demo");
+        }
+        if (collision.gameObject.name.Equals("Mace"))
+        {
+            vida -= 5;
+            scVida.size = vida / 100f;
         }
     }
 

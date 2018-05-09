@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MoverPersonaje.cs" />
+    <Compile Include="Assets\Scripts\Vida.cs" />
     <Compile Include="Assets\Sprites\EasterEggs\Scripts\Egg.cs" />
     <Compile Include="Assets\Sprites\EasterEggs\Scripts\EggSequence.cs" />
     <Compile Include="Assets\Sprites\EasterEggs\Scripts\GameEngineSample.cs" />
