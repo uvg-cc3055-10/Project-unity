@@ -13,12 +13,14 @@ public class MoverPersonaje : MonoBehaviour {
     public float vida = 100;
     Rigidbody2D rb;
     Animator anim;
+    GameObject spike;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-		
-	}
+        spike = GameObject.FindGameObjectWithTag("Spike");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,6 +44,13 @@ public class MoverPersonaje : MonoBehaviour {
         if (collision.gameObject.name.Equals("basurero"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (collision.gameObject.name.Equals("Spike_Down"))
+        {
+            
+            vida -= 10;
+            scVida.size = vida / 100f;
+            DestroyObject(spike);
         }
         if (collision.gameObject.name.Equals("Mace"))
         {
