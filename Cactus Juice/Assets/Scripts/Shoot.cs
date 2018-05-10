@@ -33,5 +33,19 @@ public class Shoot : MonoBehaviour {
         fire = true;
     }
 
+    public void Disparar()
+    {
+        if (fire)
+        {
+            foreach (Transform t in lanzadores)
+            {
+                MuniSpawner.spm(t.rotation, t.position);
+
+            }
+            fire = false;
+            Invoke("Reload", time);
+        }
+    }
+
 
 }

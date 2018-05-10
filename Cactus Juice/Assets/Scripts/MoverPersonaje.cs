@@ -8,20 +8,25 @@ public class MoverPersonaje : MonoBehaviour {
     private float vel = 5.0f;
     private bool arriba = false;
     private bool derecha = false;
+    private bool izquierda = false;
     private float jumpforce = 350f;
     public Scrollbar scVida;
     public float vida = 100;
     Rigidbody2D rb;
     Animator anim;
     GameObject spike;
+    SpriteRenderer sr;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         spike = GameObject.FindGameObjectWithTag("Spike");
 
     }
 	
+    
+
 	// Update is called once per frame
 	void Update () {
         float move = Input.GetAxis("Horizontal");
@@ -34,7 +39,12 @@ public class MoverPersonaje : MonoBehaviour {
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * vel);
         }
+        if (izquierda)
+        {
+            this.transform.Translate(Vector3.left * Time.deltaTime * vel);
+        }
 
+        sr.flipX = izquierda;
         anim.SetFloat("Speed", Mathf.Abs(move));
 		
 	}
@@ -67,11 +77,19 @@ public class MoverPersonaje : MonoBehaviour {
     public void MoverDerecha()
     {
         derecha = true;
+        izquierda = false;
     }
-      
+
+    public void MoverIzquierda()
+    {
+        izquierda = true;
+        derecha = false;
+    }
+
     public void Detener()
     {
         arriba = false;
         derecha = false;
+        izquierda = false;
     }
 }
