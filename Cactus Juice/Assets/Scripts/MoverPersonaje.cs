@@ -16,13 +16,17 @@ public class MoverPersonaje : MonoBehaviour {
     Animator anim;
     GameObject spike;
     SpriteRenderer sr;
-	// Use this for initialization
-	void Start () {
+    public AudioSource wimp;
+    public Camera cam;
+
+    // Use this for initialization
+    void Start () {
+        wimp = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         spike = GameObject.FindGameObjectWithTag("Spike");
-
+        cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
     }
 	
     
@@ -30,22 +34,37 @@ public class MoverPersonaje : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float move = Input.GetAxis("Horizontal");
+        if (move != 0)
+        {
+            rb.transform.Translate(new Vector3(1, 0, 0) * move * vel * Time.deltaTime);
+            cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+        }
         if (arriba)
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpforce);
+            anim.SetFloat("Speed", Mathf.Abs(0));
         }
         if (derecha)
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * vel);
+            cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+                anim.SetFloat("Speed", Mathf.Abs(1));
         }
         if (izquierda)
         {
             this.transform.Translate(Vector3.left * Time.deltaTime * vel);
+            cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+                anim.SetFloat("Speed", Mathf.Abs(1));
+            
+        }
+        if(arriba==false && izquierda==false && derecha == false)
+        {
+            anim.SetFloat("Speed", Mathf.Abs(0));
         }
 
-        sr.flipX = izquierda;
         anim.SetFloat("Speed", Mathf.Abs(move));
+        sr.flipX = izquierda;
 		
 	}
 
@@ -61,11 +80,13 @@ public class MoverPersonaje : MonoBehaviour {
             vida -= 10;
             scVida.size = vida / 100f;
             DestroyObject(spike);
+            wimp.Play();
         }
         if (collision.gameObject.name.Equals("Mace"))
         {
             vida -= 5;
             scVida.size = vida / 100f;
+            wimp.Play();
         }
     }
 
