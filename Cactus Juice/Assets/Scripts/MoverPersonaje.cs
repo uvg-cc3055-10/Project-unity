@@ -112,7 +112,7 @@ public class MoverPersonaje : MonoBehaviour {
         {
             SPUelapsed = 0f;
             SPUactive = true;
-            DestroyObject(GameObject.FindGameObjectWithTag("SpeedPowerUp"));
+            DestroyObject(GameObject.FindGameObjectWithTag("SpeedPowerup"));
 
         }
         if (collision.tag.Equals("Basurero"))
