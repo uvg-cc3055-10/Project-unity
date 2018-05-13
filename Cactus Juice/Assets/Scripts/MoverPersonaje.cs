@@ -89,7 +89,7 @@ public class MoverPersonaje : MonoBehaviour {
             onAir = false;
         }
         
-        if (collision.gameObject.name.Equals("Spike_Down"))
+        if (collision.gameObject.name.Equals("Spike_Down") || collision.gameObject.name.Equals("Mace") || collision.gameObject.name.Equals("arbol"))
         {
             
             vida -= 10;
@@ -97,12 +97,7 @@ public class MoverPersonaje : MonoBehaviour {
             DestroyObject(spike);
             wimp.Play();
         }
-        if (collision.gameObject.name.Equals("Mace"))
-        {
-            vida -= 5;
-            scVida.size = vida / 100f;
-            wimp.Play();
-        }
+        
         
     }
 
@@ -113,8 +108,15 @@ public class MoverPersonaje : MonoBehaviour {
             SPUelapsed = 0f;
             SPUactive = true;
             DestroyObject(GameObject.FindGameObjectWithTag("SpeedPowerup"));
-
         }
+
+        if (collision.tag.Equals("LifePowerup"))
+        {
+            vida += 10;
+            scVida.size = vida / 100f;
+            DestroyObject(GameObject.FindGameObjectWithTag("LifePowerup"));
+        }
+
         if (collision.tag.Equals("Basurero"))
         {
             SceneManager.LoadScene(leveltoLoad);
