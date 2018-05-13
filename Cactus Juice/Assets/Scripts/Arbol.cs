@@ -45,7 +45,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("bubbles"))
+        if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida>= 15)
             {
@@ -60,7 +60,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("bubbles"))
+        if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida >= 15)
             {

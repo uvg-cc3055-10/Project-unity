@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spike
   - Arbol
+  - Basurero
+  - Speed
+  - SpeedPowerup
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Grass
   - 
   - 
   - 

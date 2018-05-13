@@ -5,19 +5,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MoverPersonaje : MonoBehaviour {
-    private float vel = 5.0f;
+    private float vel = 6.0f;
     private bool arriba = false;
     private bool derecha = false;
     private bool izquierda = false;
     private float jumpforce = 350f;
     public Scrollbar scVida;
     public float vida = 100;
+    float SPUelapsed = 0;
+    bool SPUactive = false;
     Rigidbody2D rb;
     Animator anim;
     GameObject spike;
+    GameObject SpeedPowerup;
     SpriteRenderer sr;
-    public AudioSource wimp;
+    AudioSource wimp;
     public Camera cam;
+    public string leveltoLoad;
+    public GameObject feet;
+    public LayerMask layerMask;
+    public bool onAir;
 
     // Use this for initialization
     void Start () {
@@ -26,19 +33,15 @@ public class MoverPersonaje : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         spike = GameObject.FindGameObjectWithTag("Spike");
+        SpeedPowerup = GameObject.FindGameObjectWithTag("SpeedPowerup");
         cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+        anim.SetFloat("Speed", Mathf.Abs(0));
     }
 	
     
 
 	// Update is called once per frame
 	void Update () {
-        float move = Input.GetAxis("Horizontal");
-        if (move != 0)
-        {
-            rb.transform.Translate(new Vector3(1, 0, 0) * move * vel * Time.deltaTime);
-            cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
-        }
         if (arriba)
         {
             rb.velocity = Vector2.zero;
@@ -49,31 +52,43 @@ public class MoverPersonaje : MonoBehaviour {
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * vel);
             cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
-                anim.SetFloat("Speed", Mathf.Abs(1));
+            anim.SetFloat("Speed", Mathf.Abs(1.0f));
         }
         if (izquierda)
         {
             this.transform.Translate(Vector3.left * Time.deltaTime * vel);
             cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
-                anim.SetFloat("Speed", Mathf.Abs(1));
-            
-        }
-        if(arriba==false && izquierda==false && derecha == false)
-        {
-            anim.SetFloat("Speed", Mathf.Abs(0));
+            anim.SetFloat("Speed", Mathf.Abs(1.0f));
+
         }
 
-        anim.SetFloat("Speed", Mathf.Abs(move));
-        sr.flipX = izquierda;
-		
-	}
+        if (SPUactive == true)
+        {
+            if (SPUelapsed >= 0f && SPUelapsed < 4.0f)
+            {
+                
+                    vel = 20.0f;
+                    SPUelapsed += Time.deltaTime;
+                
+            }
+            else
+            {
+                vel = 6.0f;
+                SPUactive = false;
+            }
+        }
+
+            sr.flipX = izquierda;
+        
+    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("basurero"))
+        if (collision.gameObject.layer.Equals("Grass"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            onAir = false;
         }
+        
         if (collision.gameObject.name.Equals("Spike_Down"))
         {
             
@@ -87,6 +102,22 @@ public class MoverPersonaje : MonoBehaviour {
             vida -= 5;
             scVida.size = vida / 100f;
             wimp.Play();
+        }
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("SpeedPowerup"))
+        {
+            SPUelapsed = 0f;
+            SPUactive = true;
+            DestroyObject(GameObject.FindGameObjectWithTag("SpeedPowerUp"));
+
+        }
+        if (collision.tag.Equals("Basurero"))
+        {
+            SceneManager.LoadScene(leveltoLoad);
         }
     }
 
@@ -112,5 +143,7 @@ public class MoverPersonaje : MonoBehaviour {
         arriba = false;
         derecha = false;
         izquierda = false;
+        anim.SetFloat("Speed", Mathf.Abs(0));
     }
+
 }

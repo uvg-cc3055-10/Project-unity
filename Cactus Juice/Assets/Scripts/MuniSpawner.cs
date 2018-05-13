@@ -50,5 +50,6 @@ public class MuniSpawner : MonoBehaviour {
     {
         transform.position = transform.parent.position;
         gameObject.SetActive(false);
+        
     }
 }
