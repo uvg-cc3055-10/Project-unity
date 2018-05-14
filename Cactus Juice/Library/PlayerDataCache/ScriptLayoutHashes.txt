@@ -1,11 +1,12 @@
 Android
 PlayerPath?
-C:/Users/cooli/Desktop/Plataformas/ProyectoP/Cactus Juice/ProyectoAPK.apk
+C:/Users/Mafer/Documents/GitHub/Project-unity/Cactus Juice/Good Boy.apk
 SceneListBegin?
 Assets/Scene/Menu.unity
 Assets/Scene/scene1.unity
 Assets/Scene/Demo.unity
-Assets/Scene/Ending.unity
+Assets/Scene/End.unity
+Assets/Scene/GameOver.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
@@ -384,4 +385,3 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PowerUp

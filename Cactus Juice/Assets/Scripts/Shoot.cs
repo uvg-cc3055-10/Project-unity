@@ -7,11 +7,14 @@ public class Shoot : MonoBehaviour {
     public Transform[] lanzadores;
     public float time = 0.4f;
     public bool fire = true;
+    AudioSource efectos;
+   public  AudioClip burbujas;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        efectos = GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,10 +23,14 @@ public class Shoot : MonoBehaviour {
             foreach(Transform t in lanzadores)
             {
                 MuniSpawner.spm(t.rotation, t.position);
+                efectos.clip = burbujas;
+                efectos.Play();
 
             }
             fire = false;
             Invoke("Reload", time);
+            efectos.clip = burbujas;
+            efectos.Play();
         }
 		
 	}
@@ -40,11 +47,17 @@ public class Shoot : MonoBehaviour {
             foreach (Transform t in lanzadores)
             {
                 MuniSpawner.spm(t.rotation, t.position);
+                efectos.clip = burbujas;
+                efectos.Play();
+
+
 
             }
             fire = false;
             Invoke("Reload", time);
         }
+        efectos.clip = burbujas;
+        efectos.Play();
     }
 
 

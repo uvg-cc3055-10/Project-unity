@@ -275,7 +275,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2046857480}
-          m_MethodName: Detener
+          m_MethodName: MoverDerecha
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -903,9 +903,9 @@ RectTransform:
   m_Father: {fileID: 1778942437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.04623077, y: 1}
-  m_AnchorMax: {x: 0.04623077, y: 1}
-  m_AnchoredPosition: {x: 440.86, y: -720.51}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 264, y: 256}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903443051
@@ -942,7 +942,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2046857480}
-          m_MethodName: Detener
+          m_MethodName: MoverArriba
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1509,7 +1509,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2046857480}
-          m_MethodName: Detener
+          m_MethodName: MoverIzquierda
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6009,6 +6009,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scVida: {fileID: 0}
   vida: 100
+  speedPu: {fileID: 8300000, guid: 023699b7a614aa54caae66dea4e2a641, type: 3}
+  wimper: {fileID: 8300000, guid: 46c7724b2d6f9354d8afa12399f127b5, type: 3}
+  vida1: {fileID: 8300000, guid: 4287d44edc6e81c48aeedd00f14193ec, type: 3}
+  tunel: {fileID: 8300000, guid: 26547505510af8d41b697d60bf8883a9, type: 3}
   cam: {fileID: 1625506108}
   leveltoLoad: Demo
   feet: {fileID: 1327859793}

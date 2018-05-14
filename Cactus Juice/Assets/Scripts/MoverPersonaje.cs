@@ -20,6 +20,10 @@ public class MoverPersonaje : MonoBehaviour {
     GameObject SpeedPowerup;
     SpriteRenderer sr;
     AudioSource wimp;
+    public AudioClip speedPu;
+    public AudioClip wimper;
+    public AudioClip vida1;
+    public AudioClip tunel;
     public Camera cam;
     public string leveltoLoad;
     public GameObject feet;
@@ -91,10 +95,18 @@ public class MoverPersonaje : MonoBehaviour {
         
         if (collision.gameObject.name.Equals("Spike_Down") || collision.gameObject.name.Equals("Mace") || collision.gameObject.name.Equals("arbol"))
         {
-            
-            vida -= 10;
-            scVida.size = vida / 100f;
-            DestroyObject(spike);
+            if (vida > 0)
+            {
+                vida -= 10;
+                scVida.size = vida / 100f;
+                DestroyObject(spike);
+                wimp.clip = wimper;
+                
+            } else 
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+
             wimp.Play();
         }
         
@@ -107,20 +119,30 @@ public class MoverPersonaje : MonoBehaviour {
         {
             SPUelapsed = 0f;
             SPUactive = true;
+            wimp.clip = speedPu;
             DestroyObject(GameObject.FindGameObjectWithTag("SpeedPowerup"));
         }
 
         if (collision.tag.Equals("LifePowerup"))
         {
-            vida += 10;
-            scVida.size = vida / 100f;
-            DestroyObject(GameObject.FindGameObjectWithTag("LifePowerup"));
+           
+                vida += 10;
+                scVida.size = vida / 100f;
+                DestroyObject(GameObject.FindGameObjectWithTag("LifePowerup"));
+            wimp.clip = vida1;
+            
+                
+           
         }
 
         if (collision.tag.Equals("Basurero"))
         {
             SceneManager.LoadScene(leveltoLoad);
+            wimp.clip = tunel;
+            
         }
+
+        wimp.Play();
     }
 
     public void MoverArriba()

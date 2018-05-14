@@ -15,5 +15,8 @@ EditorBuildSettings:
     path: Assets/Scene/Demo.unity
     guid: c141d24673958bb44b780d361745cca7
   - enabled: 1
-    path: Assets/Scene/Ending.unity
-    guid: aacc1c71953ef2f47be03e5ee2c08f41
+    path: Assets/Scene/End.unity
+    guid: 8857cb2221c585b4c928a1bb48b10884
+  - enabled: 1
+    path: Assets/Scene/GameOver.unity
+    guid: 86854ffe80f78464898174586c4e2267
