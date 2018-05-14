@@ -109,6 +109,10 @@ public class MoverPersonaje : MonoBehaviour {
 
             wimp.Play();
         }
+        if (collision.gameObject.name.Equals("branch"))
+        {
+            SceneManager.LoadScene("Win");
+        }
         
         
     }

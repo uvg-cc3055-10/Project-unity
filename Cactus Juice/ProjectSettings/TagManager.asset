@@ -9,6 +9,8 @@ TagManager:
   - Basurero
   - Speed
   - SpeedPowerup
+  - LifePowerup
+  - Win
   layers:
   - Default
   - TransparentFX
