@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//Enemy.cs
+//23/05/2018
+//Mecanicas del arbol grande del final
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +50,7 @@ public class Enemy : MonoBehaviour
 
     }
 
+//tiene mayor vida pero igual muere con ataques de burbujas
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
