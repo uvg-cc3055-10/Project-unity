@@ -11,7 +11,7 @@ public class MoverPersonaje : MonoBehaviour {
     private bool izquierda = false;
     private float jumpforce = 350f;
     public Scrollbar scVida;
-    public float vida = 100;
+    static public float vida = 100;
     float SPUelapsed = 0;
     bool SPUactive = false;
     Rigidbody2D rb;
@@ -24,6 +24,7 @@ public class MoverPersonaje : MonoBehaviour {
     public AudioClip wimper;
     public AudioClip vida1;
     public AudioClip tunel;
+    public AudioClip boom;
     public Camera cam;
     public string leveltoLoad;
     public GameObject feet;
@@ -44,6 +45,12 @@ public class MoverPersonaje : MonoBehaviour {
         SpeedPowerup = GameObject.FindGameObjectWithTag("SpeedPowerup");
         cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
         anim.SetFloat("Speed", Mathf.Abs(0));
+        scVida.size = vida / 100f;
+        if (SceneManager.GetActiveScene().name.Equals("level1"))
+        {
+            vida = 100;
+            scVida.size = vida / 100f;
+        }
     }
 	
     
@@ -87,7 +94,9 @@ public class MoverPersonaje : MonoBehaviour {
         }
 
             sr.flipX = izquierda;
-        
+
+        if (rb.transform.position.y < -10) SceneManager.LoadScene("GameOver");
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -163,9 +172,10 @@ public class MoverPersonaje : MonoBehaviour {
         {
             if (vida > 0)
             {
-                wimp.clip = wimper;
+                wimp.clip = boom;
                 vida -= 30;
                 scVida.size = vida / 100f;
+                DestroyObject(GameObject.FindGameObjectWithTag("Bomb"));
 
             } else
             {
