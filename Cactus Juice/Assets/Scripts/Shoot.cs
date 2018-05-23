@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//Shoot.cs
+//23/05/2018
+//Mecanicas de lanzar burbujas para el boton
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +24,7 @@ public class Shoot : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown (KeyCode.Space) && fire)
         {
+		//Llama al spawner
             foreach(Transform t in lanzadores)
             {
                 MuniSpawner.spm(t.rotation, t.position);
@@ -35,6 +40,7 @@ public class Shoot : MonoBehaviour {
 		
 	}
 
+	//Para los botones
     public void Reload()
     {
         fire = true;

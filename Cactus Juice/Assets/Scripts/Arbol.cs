@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//Arbol.cs
+//23/05/2018
+//Mecanicas del arbol
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,9 +38,11 @@ public class Arbol : MonoBehaviour {
         Vector3 target = position;
 
 
+        //Persigue al personaje si este se acerca mucho
         float dist = Vector3.Distance(perro.transform.position, transform.position);
         if (dist < radio) target = perro.transform.position;
 
+        //Activa la animacion
         anim.SetBool("moving", true);
         float fixedSpeed = velocidad * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
@@ -46,6 +52,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        //Cada vez que colisiona con las burbujas del jugador
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida>= 15)
@@ -61,6 +68,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //Si colisiona con burbujas del jugador como triggered colliders
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida >= 15)

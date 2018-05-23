@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//Bomba.cs
+//23/05/2018
+//Mecanicas de la bomba
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

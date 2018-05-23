@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//BubbleMove.cs
+//23/05/2018
+//Mecanicas del ataque del perrito, que son burbujas
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +17,10 @@ public class BubbleMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        transform.position += transform.right * speed * Time.deltaTime;
-        Invoke("Destroy", timer);
+		//Se mueve
+        	transform.position += transform.right * speed * Time.deltaTime;
+		//Se destruyen despues de un tiempo
+        	Invoke("Destroy", timer);
 		
 	}
 
