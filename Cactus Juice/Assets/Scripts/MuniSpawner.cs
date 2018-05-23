@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//MuniSpawner.cs
+//23/05/2018
+//Mecanicas del ataque
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +19,7 @@ public class MuniSpawner : MonoBehaviour {
 	void Start () {
         muniSpawner = this.GetComponent<MuniSpawner> ();
 
+		//Clona varias burbujas y las pone en un array
         for(int i = 0; i<municion; i++)
         {
             GameObject muni = Instantiate(bubbles, transform.position, Quaternion.identity) as GameObject;
