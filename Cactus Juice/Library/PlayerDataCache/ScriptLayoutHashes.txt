@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Mafer/Documents/GitHub/Project-unity/Cactus Juice/Good Boy.apk
+C:/Users/cooli/Desktop/Plataformas/ProyectoP/Cactus Juice/ProyectoAPK2.apk
 SceneListBegin?
 Assets/Scene/Menu.unity
 Assets/Scene/Demo.unity

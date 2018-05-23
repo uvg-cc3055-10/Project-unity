@@ -143,6 +143,14 @@ public class MoverPersonaje : MonoBehaviour {
                 
            
         }
+
+        if (collision.tag.Equals("Bomb"))
+        {
+            wimp.clip = wimper;
+            vida -= 30;
+            scVida.size = vida / 100f;
+
+        }
     
         if (collision.tag.Equals("espina"))
         {

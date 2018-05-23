@@ -14,13 +14,14 @@ public class Arbol : MonoBehaviour {
 
     //asi mismo necesitamos su posicion inicial del character 
     Vector3 position;
+    Animator anim;
 
     // Use this for initialization
     void Start()
     {
         arbol = GameObject.FindGameObjectWithTag("Arbol");
         perro = GameObject.FindGameObjectWithTag("Player");
-
+        anim = GetComponent<Animator>();
         position = transform.position;
 
 
@@ -36,7 +37,7 @@ public class Arbol : MonoBehaviour {
         float dist = Vector3.Distance(perro.transform.position, transform.position);
         if (dist < radio) target = perro.transform.position;
 
-
+        anim.SetBool("moving", true);
         float fixedSpeed = velocidad * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
 

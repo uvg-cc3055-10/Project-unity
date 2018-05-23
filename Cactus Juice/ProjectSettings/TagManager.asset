@@ -12,6 +12,7 @@ TagManager:
   - LifePowerup
   - Win
   - espina
+  - Bomb
   layers:
   - Default
   - TransparentFX
