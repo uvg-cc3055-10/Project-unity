@@ -1,13 +1,15 @@
 Android
 PlayerPath?
-C:/Users/cooli/Desktop/Plataformas/ProyectoP/Cactus Juice/ProyectoAPK.apk
+C:/Users/Mafer/Documents/GitHub/Project-unity/Cactus Juice/Good Boy.apk
 SceneListBegin?
 Assets/Scene/Menu.unity
-Assets/Scene/scene1.unity
 Assets/Scene/Demo.unity
 Assets/Scene/End.unity
 Assets/Scene/GameOver.unity
 Assets/Scene/Win.unity
+Assets/Scene/level1.unity
+Assets/Scene/level3.unity
+Assets/Scene/level4.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI

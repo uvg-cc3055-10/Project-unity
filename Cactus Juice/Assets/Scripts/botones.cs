@@ -7,6 +7,6 @@ public class botones : MonoBehaviour {
 
 	public void PlayGame()
     {
-        SceneManager.LoadScene("scene1");
+        SceneManager.LoadScene("level1");
     }
 }
