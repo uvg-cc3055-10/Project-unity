@@ -252,6 +252,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Arbol.cs" />
     <Compile Include="Assets\Scripts\ataqueArbol.cs" />
+    <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\Bomba.cs" />
     <Compile Include="Assets\Scripts\botones.cs" />
     <Compile Include="Assets\Scripts\BubbleMove.cs" />
