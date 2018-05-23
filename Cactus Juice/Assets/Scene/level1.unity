@@ -1017,6 +1017,7 @@ MonoBehaviour:
   wimper: {fileID: 8300000, guid: 46c7724b2d6f9354d8afa12399f127b5, type: 3}
   vida1: {fileID: 8300000, guid: 4287d44edc6e81c48aeedd00f14193ec, type: 3}
   tunel: {fileID: 8300000, guid: 26547505510af8d41b697d60bf8883a9, type: 3}
+  boom: {fileID: 0}
   cam: {fileID: 1327549195}
   leveltoLoad: Demo
   feet: {fileID: 0}
@@ -1933,8 +1934,8 @@ Transform:
   m_Father: {fileID: 1261844242}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1037751282
-CircleCollider2D:
+--- !u!61 &1037751282
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1945,9 +1946,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0721854}
+  m_Offset: {x: 0.11351341, y: 0.11351219}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7081819, y: 1.7081819}
+    newSize: {x: 18.79, y: 18.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.637539
+  m_Size: {x: 1.481155, y: 1.4811575}
+  m_EdgeRadius: 0
 --- !u!212 &1037751283
 SpriteRenderer:
   m_ObjectHideFlags: 0

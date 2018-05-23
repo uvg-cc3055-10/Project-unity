@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     public float radio;
     public float velocidad;
-    private float vida = 200;
+    private float vida = 100;
 
     GameObject arbol;
 
@@ -50,9 +50,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
-            if (vida >= 30)
+            if (vida >= 20)
             {
-                vida -= 30;
+                vida -= 20;
             }
             else
             {
@@ -66,9 +66,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
-            if (vida >= 15)
+            if (vida >= 20)
             {
-                vida -= 15;
+                vida -= 20;
             }
             else
             {
