@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//Spikes.cs
+//23/05/2018
+//Mecanicas de los spikes
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +28,7 @@ public class Spikes : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
+	// Va persiguiendo al perrito 
 	void Update () {
         Vector3 target = position;
 
