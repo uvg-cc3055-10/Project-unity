@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//Andrea Arguello 17801, Mafer Lopez 17160
+//MoverPersonaje.cs
+//23/05/2018
+//Mecanicas del perrito
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,6 +50,7 @@ public class MoverPersonaje : MonoBehaviour {
         cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
         anim.SetFloat("Speed", Mathf.Abs(0));
         scVida.size = vida / 100f;
+	    //Coloca la vida en 100 si se inicia el juego por primera vez o regresa a la primera escena
         if (SceneManager.GetActiveScene().name.Equals("level1"))
         {
             vida = 100;
@@ -57,18 +62,21 @@ public class MoverPersonaje : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//Salto
         if (arriba)
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpforce);
             anim.SetFloat("Speed", Mathf.Abs(0));
         }
+		//movimiento a la derecha
         if (derecha)
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * vel);
             cam.transform.position = new Vector3(rb.transform.position.x, cam.transform.position.y, cam.transform.position.z);
             anim.SetFloat("Speed", Mathf.Abs(1.0f));
         }
+		//movimiento a la izquierda
         if (izquierda)
         {
             this.transform.Translate(Vector3.left * Time.deltaTime * vel);
@@ -77,6 +85,7 @@ public class MoverPersonaje : MonoBehaviour {
 
         }
 
+		//Powerup de velocidad
         if (SPUactive == true)
         {
             if (SPUelapsed >= 0f && SPUelapsed < 4.0f)
@@ -94,7 +103,7 @@ public class MoverPersonaje : MonoBehaviour {
         }
 
             sr.flipX = izquierda;
-
+	//Si se cae de una plataforma
         if (rb.transform.position.y < -10) SceneManager.LoadScene("GameOver");
 
     }
@@ -131,6 +140,7 @@ public class MoverPersonaje : MonoBehaviour {
         
     }
 
+	//Colliders de powerups, enemigos, entre otros
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("SpeedPowerup"))
@@ -203,7 +213,7 @@ public class MoverPersonaje : MonoBehaviour {
             nivel += 1;
             
         }
-
+	//Pone el sonido que se llame dependiendo de la colision
         wimp.Play();
     }
 
@@ -212,6 +222,7 @@ public class MoverPersonaje : MonoBehaviour {
         arriba = true;
     }
 
+	//Para los botones
     public void MoverDerecha()
     {
         derecha = true;
