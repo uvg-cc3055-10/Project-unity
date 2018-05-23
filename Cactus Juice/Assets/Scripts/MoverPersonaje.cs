@@ -144,11 +144,33 @@ public class MoverPersonaje : MonoBehaviour {
            
         }
 
+        if (collision.tag.Equals("Spike"))
+        {
+            if (vida > 0)
+            {
+                wimp.clip = wimper;
+                vida -= 15;
+                scVida.size = vida / 100f;
+
+            }
+            else
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
+
         if (collision.tag.Equals("Bomb"))
         {
-            wimp.clip = wimper;
-            vida -= 30;
-            scVida.size = vida / 100f;
+            if (vida > 0)
+            {
+                wimp.clip = wimper;
+                vida -= 30;
+                scVida.size = vida / 100f;
+
+            } else
+            {
+                SceneManager.LoadScene("GameOver");
+            }
 
         }
     

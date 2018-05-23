@@ -22,7 +22,7 @@ public class Bomba : MonoBehaviour {
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Equals("Perro"))
-        { 
+        {
             anim.SetBool("exploto", true);
             boom.Play();
 

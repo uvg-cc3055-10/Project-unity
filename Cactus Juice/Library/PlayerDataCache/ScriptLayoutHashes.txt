@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/cooli/Desktop/Plataformas/ProyectoP/Cactus Juice/ProyectoAPK2.apk
+C:/Users/Mafer/Documents/GitHub/Project-unity/Cactus Juice/Projecto.apk
 SceneListBegin?
 Assets/Scene/Menu.unity
 Assets/Scene/Demo.unity
@@ -10,6 +10,7 @@ Assets/Scene/Win.unity
 Assets/Scene/level1.unity
 Assets/Scene/level3.unity
 Assets/Scene/level4.unity
+Assets/Scene/pelaF.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
@@ -92,6 +93,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 6a492d7b8465b2c00d15794caa46ec2e Assembly-CSharp.dll:TMPro.Examples.TMPro_InstructionOverlay
 765037da3d8faeee91e39d672b924c61 Assembly-CSharp.dll:.EnvMapAnimator
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bomba
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -388,3 +390,5 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.ataqueArbol
+e5e1499bf7fa88558f651914a8be7673 Assembly-CSharp.dll:.Enemy

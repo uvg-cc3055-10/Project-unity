@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/level4.unity
     guid: 4d54ab8d639d7624b90174d2a137e321
+  - enabled: 1
+    path: Assets/Scene/pelaF.unity
+    guid: 52754ce481a3b504da88f3f27f452c2f

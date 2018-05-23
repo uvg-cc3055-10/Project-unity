@@ -2851,7 +2851,7 @@ MonoBehaviour:
   vida1: {fileID: 8300000, guid: 4287d44edc6e81c48aeedd00f14193ec, type: 3}
   tunel: {fileID: 8300000, guid: 26547505510af8d41b697d60bf8883a9, type: 3}
   cam: {fileID: 1327549195}
-  leveltoLoad: level4
+  leveltoLoad: pelaF
   feet: {fileID: 0}
   layerMask:
     serializedVersion: 2
@@ -7131,8 +7131,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1652585241
-  m_SortingLayer: 2
+  m_SortingLayerID: 1221233971
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dc6f36a2d0b11624695281de4a26b2ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7151,7 +7151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1416077180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.67, y: -1.89, z: 0}
+  m_LocalPosition: {x: 45.55, y: -3.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
