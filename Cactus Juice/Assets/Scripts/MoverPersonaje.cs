@@ -101,34 +101,10 @@ public class MoverPersonaje : MonoBehaviour {
         {
             if (vida > 0)
             {
-                if (nivel == 1)
-                {
+                
                     vida -= 10;
                     scVida.size = vida / 100f;
                     DestroyObject(spike);
-                   
-                }else if (nivel == 2)
-                {
-                    vida -= 15;
-                    scVida.size = vida / 100f;
-                    DestroyObject(spike);
-                }else if (nivel == 3)
-                {
-                    vida -= 20;
-                    scVida.size = vida / 100f;
-                    DestroyObject(spike);
-                }else if (nivel == 4)
-                {
-                    vida -= 25;
-                    scVida.size = vida / 100f;
-                    DestroyObject(spike);
-                }else if (nivel == 5)
-                {
-                    vida -= 30;
-                    scVida.size = vida / 100f;
-                    DestroyObject(spike);
-                }
-
                 wimp.clip = wimper;
 
             } else 

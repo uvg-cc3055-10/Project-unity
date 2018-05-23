@@ -5,7 +5,14 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scVida: {instanceID: 0}
+  - speedPu: {fileID: 8300000, guid: 023699b7a614aa54caae66dea4e2a641, type: 3}
+  - wimper: {fileID: 8300000, guid: 46c7724b2d6f9354d8afa12399f127b5, type: 3}
+  - vida1: {instanceID: 0}
+  - tunel: {instanceID: 0}
+  - cam: {instanceID: 0}
+  - feet: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
