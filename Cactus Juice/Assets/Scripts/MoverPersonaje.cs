@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class MoverPersonaje : MonoBehaviour {
     private float vel = 6.0f;
+//variables para poder mover el personaje con los botones
     private bool arriba = false;
     private bool derecha = false;
     private bool izquierda = false;
@@ -18,12 +19,14 @@ public class MoverPersonaje : MonoBehaviour {
     static public float vida = 100;
     float SPUelapsed = 0;
     bool SPUactive = false;
+//objets del mundo para poder controlarlos
     Rigidbody2D rb;
     Animator anim;
     GameObject spike;
     GameObject SpeedPowerup;
     SpriteRenderer sr;
     AudioSource wimp;
+//audioclips para cada situacion descrita mas abajo en el codigo
     public AudioClip speedPu;
     public AudioClip wimper;
     public AudioClip vida1;
@@ -39,7 +42,7 @@ public class MoverPersonaje : MonoBehaviour {
 
   
 
-    // Use this for initialization
+    // se obtienen todos los objects del juego y componentes para poder crear los efectos y animaciones
     void Start () {
         wimp = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
@@ -60,7 +63,7 @@ public class MoverPersonaje : MonoBehaviour {
 	
     
 
-	// Update is called once per frame
+	/
 	void Update () {
 		//Salto
         if (arriba)
@@ -115,6 +118,7 @@ public class MoverPersonaje : MonoBehaviour {
             onAir = false;
         }
         
+	    //si colisiona con cualquiera de estos objetos se le quita vida al perro, se declara el audioclip que sonora cuando esto passe
         if (collision.gameObject.name.Equals("Spike_Down") || collision.gameObject.name.Equals("Mace") || collision.gameObject.name.Equals("arbol"))
         {
             if (vida > 0)
@@ -132,6 +136,7 @@ public class MoverPersonaje : MonoBehaviour {
 
             wimp.Play();
         }
+	    //condicion de ganador
         if (collision.gameObject.name.Equals("branch"))
         {
             SceneManager.LoadScene("Win");
@@ -177,7 +182,8 @@ public class MoverPersonaje : MonoBehaviour {
                 SceneManager.LoadScene("GameOver");
             }
         }
-
+	
+	    //si colisiona con una bomba se le wuita vida, suena un clip y se destruye el objeto de la bomba
         if (collision.tag.Equals("Bomb"))
         {
             if (vida > 0)
@@ -194,6 +200,7 @@ public class MoverPersonaje : MonoBehaviour {
 
         }
     
+	    //si colisiona con unas espinas en el nivel 4 del juego se le resta vida
         if (collision.tag.Equals("espina"))
         {
             if (vida > 0)
