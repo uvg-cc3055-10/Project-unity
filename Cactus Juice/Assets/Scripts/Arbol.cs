@@ -52,7 +52,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Cada vez que colisiona con las burbujas del jugador
+        //Cada vez que colisiona con las burbujas del jugador se le resta vida al arbol, si ya no tiene se destruye
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida>= 15)
@@ -68,7 +68,7 @@ public class Arbol : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Si colisiona con burbujas del jugador como triggered colliders
+        //Si colisiona con burbujas del jugador como triggered colliders se le resta vida al arbol, si ya no tiene vida se destruye
         if (collision.gameObject.name.Equals("bubbles(Clone)"))
         {
             if (vida >= 15)
